@@ -1,7 +1,7 @@
-const { defineConfig } = require("cypress");
-const cucumber = require('cypress-cucumber-preprocessor').default;
+import { defineConfig } from "cypress";
+import cucumber from 'cypress-cucumber-preprocessor';
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber())
